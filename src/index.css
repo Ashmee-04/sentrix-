@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-bg: #F7F8F4;
+  --color-warm-surface: #FFFFFF;
+  --color-warm-border: #E4EAE5;
+  --color-sage-soft: #DCE8DF;
+  --color-sage-dark: #375344;
+  --color-teal-muted: #6F9C95;
+  --color-teal-deep: #2F5952;
+  --color-pale-blue: #E5EEF5;
+  --color-subtle-lavender: #EAE6F2;
+  --color-charcoal: #34434A;
+  --color-charcoal-muted: #657780;
+  --color-charcoal-light: #8E9FA8;
+  --color-emergency-coral: #D94336;
+  --color-emergency-bg: #FDF1EF;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #F7F8F4;
+  color: #34434A;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F4F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD6CE;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A6B8AC;
+}
+
+/* Pulse animation for SOS active state */
+@keyframes urgent-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(217, 67, 54, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(217, 67, 54, 0);
+  }
+}
+
+.animate-urgent-pulse {
+  animation: urgent-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Radar ping */
+@keyframes radar-sweep {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}

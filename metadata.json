@@ -1,0 +1,6 @@
+{
+  "name": "SENTRIX — Smart Citizen Safety & Emergency Response",
+  "description": "Bengaluru citizen safety and emergency response platform featuring SOS, AI incident intelligence, verified civic and women's safety resources, and responder operations dashboard.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
